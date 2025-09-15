@@ -1,1 +1,139 @@
+:root{
+  --bg-page: #ffffff;
+  --header-bg: #141a1a;
+  --card-bg: #2680ca;
+  --placeholder: #d3d3d3;
+  --text: #ffffff;
+}
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header-bg);
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  font-family: system-ui, sans-serif;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.user-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bell {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.logout {
+  background: #ff4d4d;
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+body{
+  margin: 0;
+  background: var(--bg-page);
+  font-family: "Times New Roman", Times, Georgia, serif;
+  color: var(--text);
+}
+
+.wrap{
+  max-width: 1280px;
+  margin: 28px auto;
+  padding: 0 18px;
+}
+
+.cards {
+  display: flex;
+  gap: 36px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  width: calc((100% - 72px) / 3);
+  min-width: 260px;
+  box-sizing: border-box;
+  padding: 28px 20px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.03);
+}
+
+.placeholder {
+  width: 250px;
+  height: 250px;
+  background: var(--placeholder);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #666;
+  margin-bottom: 26px;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+  margin: 8px 0 12px;
+  text-align: center;
+}
+
+.price {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: auto;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+@media (max-width: 1000px){
+  .card { width: calc((100% - 36px) / 2); }
+}
+@media (max-width: 640px){
+  .cards { gap: 18px; }
+  .card { width: 100%; }
+  .wrap { margin: 12px auto; }
+  .nav { display: none; } 
+}
